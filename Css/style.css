@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scroll-behavior: auto;
+    
 }
 
 /* global variable */
@@ -11,6 +11,7 @@
     --heading-color:white;
     --Red-layer:rgba(214, 46, 51, 0.4);
     --red-text:rgba(214, 46, 51, 0.6);
+    scroll-behavior: auto;
 
 
 }
