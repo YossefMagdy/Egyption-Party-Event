@@ -89,3 +89,5 @@ $(".nav-link").click(function(){
     $(".nav-link").not(this).removeClass("active")
     
 })
+
+$("html,body").animate({scrollTop:0},2000)
