@@ -3,27 +3,27 @@
 $("#open").click(function(){
     console.log()
    if($("#navbar").outerWidth()==0){
-    $("#navbar").animate({width:"250px"},2000)
-    $("#open").animate({marginLeft:"250px"},2000)
-    $(".heading h2,.heading p").animate({marginLeft:"250px"},2000)
+    $("#navbar").animate({width:"250px"},1000)
+    $("#open").animate({marginLeft:"250px"},1000)
+    $(".heading h2,.heading p").animate({marginLeft:"250px"},1000)
    }
    else{
-    $("#navbar").animate({width:"0"},2000)
-    $("#open").animate({marginLeft:"0"},2000)
-    $(".heading h2,.heading p").animate({marginLeft:"0"},2000)
+    $("#navbar").animate({width:"0"},1000)
+    $("#open").animate({marginLeft:"0"},1000)
+    $(".heading h2,.heading p").animate({marginLeft:"0"},1000)
    }
 })
 
 $("#close").click(function(){
     if($("#navbar").outerWidth()==0){
-        $("#navbar").animate({width:"250px"},2000)
-        $("#open").animate({marginLeft:"250px"},2000)
-        $(".heading h2,.heading p").animate({marginLeft:"250px"},2000)
+        $("#navbar").animate({width:"250px"},1000)
+        $("#open").animate({marginLeft:"250px"},1000)
+        $(".heading h2,.heading p").animate({marginLeft:"250px"},1000)
        }
        else{
-        $("#navbar").animate({width:"0"},2000)
-        $("#open").animate({marginLeft:"0"},2000)
-        $(".heading h2,.heading p").animate({marginLeft:"0"},2000)
+        $("#navbar").animate({width:"0"},1000)
+        $("#open").animate({marginLeft:"0"},1000)
+        $(".heading h2,.heading p").animate({marginLeft:"0"},1000)
        }
 })
 
@@ -79,4 +79,13 @@ $("#massage").keyup(function(){
     document.getElementById("range").innerHTML=`
     <span class="text-danger fw-bold">${count-Mlength}</span> Character Reamining<
     `
+})
+
+$(".nav-link").click(function(){
+    let Href=this.getAttribute("href")
+    let sectionOff=$(Href).offset().top
+    $("html,body").animate({scrollTop:sectionOff},{duration:1000,queue:false})
+    $(this).addClass("active")
+    $(".nav-link").not(this).removeClass("active")
+    
 })

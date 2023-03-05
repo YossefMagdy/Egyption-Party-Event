@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: auto;
 }
 
 /* global variable */
@@ -27,6 +28,9 @@ nav .container .nav-link{
     color: var(--heading-color);
     transition: all 0.5;
 }
+nav .container .active{
+    color: var(--red-text) !important;
+}
 nav .container .nav-link:hover{
     color: var(--red-text);
 }
@@ -36,6 +40,7 @@ nav .container i{
         right: 10%;
         color: var(--heading-color);
         font-size: 1.5rem;
+        cursor: pointer;
 }
 nav .container i:hover{
         color: var(--red-text);
@@ -142,6 +147,13 @@ header  span{
     height: 50px;
     border: 1px solid gray;
     font-size: 1.2rem;
+    cursor: pointer;
+    transition: 1s all;
+    
+}
+.contact .social-media i:hover{
+    background-color:var(--Red-layer);
+    color: var(--heading-color) !important;
     
 }
 .form{
